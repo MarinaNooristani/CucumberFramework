@@ -6,17 +6,20 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
 public class LoginPage extends CommonMethods {
-
-    @FindBy(id="txtUsername")
+    //object repository
+    @FindBy(id = "txtUsername")
     public WebElement usernameBox;
 
-    @FindBy(name="txtPassword")
+    @FindBy(name = "txtPassword")
     public WebElement passwordBox;
 
-    @FindBy(id="btnLogin")
+    @FindBy(id = "btnLogin")
     public WebElement loginBtn;
+    //HW
+    @FindBy(xpath = "//span[text() = 'Invalid credentials']")
+    public WebElement errorMessage;
 
-    public LoginPage(){
+    public LoginPage() {
         PageFactory.initElements(driver, this);
     }
 }

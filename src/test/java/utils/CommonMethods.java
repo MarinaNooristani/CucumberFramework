@@ -1,6 +1,7 @@
 package utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -67,5 +68,8 @@ public class CommonMethods extends PageInitializers {
     public static void tearDown() {
         driver.quit();
     }
-
+    //HW
+    public static void getText(WebElement element) {
+        System.out.println(element.getText());
+    }
 }
